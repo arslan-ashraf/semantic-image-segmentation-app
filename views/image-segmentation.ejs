@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<a rel="stylesheet" type="text/css" href="index.css">
+		<title><%= title %></title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+		<style>
+			.no-display {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="container">
+
+			<ul class="nav nav-pills nav-justified">
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="/image-segmentation">Image Segmentation</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/notebook">Notebook</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="https://github.com/arslan-ashraf/semantic-image-segmentation-app">Github</a>
+				</li>
+				
+			</ul>
+			
+			<br></br>
+
+			<h1>Thanks to Berkeley DeepDrive for the images!</h1>
+			<br></br>
+
+			<p>Upload an image to test out semantic image segmentation! </p>
+
+			<div class="col-lg-4 col-lg-offset-4">
+				<div class="input-group">
+					<div class="custom-file">
+						<input type="file" class="custom-file-input uploaded-image" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+						<label class="custom-file-label" for="inputGroupFile04"></label>
+					</div>
+					<div class="input-group-append">
+						<button class="btn btn-outline-secondary submit-button" type="button" id="inputGroupFileAddon04">Submit Image</button>
+					</div>
+				</div>
+			</div>
+
+			<br></br>
+
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				<div class="col">
+					<div class="card image-card">
+						<img src="/images/image-example1.jpg" class="rounded image">
+						<div class="card-body">
+							<h5 class="card-title">Image</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card mask-card">
+						<img src="/images/mask-example1.png" class="rounded mask">
+						<canvas class="canvas" height="0" width="0"></canvas>
+						<div class="card-body">
+							<h5 class="card-title">Semantic Segmentation</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h1>Sample images</h1>
+
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				<div class="col">
+					<div class="card">
+						<img src="/images/image-example2.jpg" class="rounded">
+						<div class="card-body">
+							<h5 class="card-title">Image</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="/images/mask-example2.png" class="rounded">
+						<div class="card-body">
+							<h5 class="card-title">Semantic Segmentation</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row row-cols-1 row-cols-md-2 g-4">
+				<div class="col">
+					<div class="card">
+						<img src="/images/image-example3.jpg" class="rounded">
+						<div class="card-body">
+							<h5 class="card-title">Image</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card">
+						<img src="/images/mask-example3.png" class="rounded">
+						<div class="card-body">
+							<h5 class="card-title">Semantic Segmentation</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<img src="#" width="1280" height="720" class="no-display dummy-image">
+
+		</div>
+
+		
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -19,7 +19,11 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', function(request, response){
-	return response.render('index', { title: "Semantic Image Segmentation" })
+	return response.render('index', { title: "Home: Semantic Image Segmentation" })
+})
+
+app.get('/image-segmentation', function(request, response){
+	return response.render('image-segmentation', { title: "Semantic Image Segmentation" })
 })
 
 app.get('/notebook', function(request, response){
