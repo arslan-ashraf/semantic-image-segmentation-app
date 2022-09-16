@@ -5,3 +5,6 @@ Demo of semantic image segmentation app:
 Task: Upload an image to the server and perform semantic segmentation:
 
 https://user-images.githubusercontent.com/43149204/190242483-5cd46d71-b734-4484-996c-868a10636918.mp4
+
+Link:
+https://semantic-image-segmentation.herokuapp.com/
